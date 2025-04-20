@@ -14,6 +14,13 @@
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script>
+			function toggleMobileMenu() {
+			  const menu = document.getElementById("mobile-menu");
+			  menu.classList.toggle("active");
+			}
+		  </script>
+		
 	</head>
 	<body class="is-preload">
 
@@ -22,16 +29,48 @@
 
 				<!-- Header -->
 					<header id="header">
-						<span class="logo"><a href="index.html" ><img src="images/1.png" alt="" style=" width: 400px; height: 400px; "/></a>
+						<span class="logo"><img src="images/1.png" alt="" style=" width: 400px; height: 400px; "/>
 						</span>
+						<button class="hamburger" onclick="toggleMobileMenu()">☰</button>
+
+						<!-- Mobile Menu (hidden by default) -->
+																<div id="mobile-menu" class="mobile-nav hidden">
+																	<li><a href="index.html" class="active">Αρχική Σελίδα </a></li>
+								
+																	
+																	<li><a href="https://4fund.com/el/n5847t" target="_blank">Ενισχύστε μας Οικονομικά</a></li>
+																	
+																</div>
 					</header>
 					
+					<div class="image-container">
+						<ul class="socialmediaicons">
+							
+						  <span style="margin: 13px;"><a href="https://www.facebook.com/share/192C2CjZSj/?mibextid=wwXIfr" target="_blank"><i class="fa 
+					  fa-facebook" style="font-size: 64px;" ></i></a></span>
+						  <span><a href="https://www.instagram.com/piff_limassol_crete?igsh=OGRtcm4waHFkeWhh&utm_source=qr" target="_blank"><i class="fa fa-instagram" style="font-size: 64px;"></i></a></ul></span>
+						  
+						  </ul>
+						</div>
+					
 				<!-- Main -->
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html" class="active">Αρχική Σελίδα </a></li>
+						
+						
+						
+						
+						<li><a href="https://4fund.com/el/n5847t" target="_blank">Ενισχύστε μας Οικονομικά</a></li>
+						
+					</ul>
+				</nav>
+		<!-- Main -->
 					<div id="main">
 						
 						<!-- Content -->
 							<section id="content" class="main">
-								
+						
 								<h2>Το ιστορικό μιας γενοκτονίας </h2>
  <p>
 
@@ -66,8 +105,8 @@
 	γηγενείς Παλαιστίνιους ειρηνικά και συμπεριληπτικά, δεν άργησαν να φανούν τα
 	πρώτα σημάδια των πραγματικών προθέσεων της εγκατάστασης τους, κυρίως στις
 	πόλεις, στα εργατικά συνδικάτα αλλά και στην ύπαιθρο με τη δημιουργία των
-	κιμπούτς. Σκοπός ήταν ουσιαστικά η εκδίωξη των Παλαιστινίων από τις εστίες τους,
-	φέρνοντας τους προ τετελεσμένων γεγονότων.<br><br>
+	κιμπούτς. <strong style="color: black; font-size :larger;">Σκοπός ήταν ουσιαστικά η εκδίωξη των Παλαιστινίων από τις εστίες τους,
+	φέρνοντας τους προ τετελεσμένων γεγονότων.</strong><br><br>
 	Ως αποτέλεσμα αυτών των ενεργειών ήρθε η πρώτη αραβοισραηλινή σύρραξη στα
 	έτη 1936-1939 η οποία έληξε με ήττα των Παλαιστινίων. Το Παλαιστινιακό εθνικό
 	κίνημα αντιμετώπιζε τον Σιωνισμό ως ένα αποικιοκρατικό σχέδιο που έπρεπε να
@@ -107,8 +146,8 @@
 	Παλαιστινιακής Αρχής Γιασέρ Αραφάτ δηλητηριάστηκε και πέθανε) και έφεραν
 	περισσότερους εποικισμούς και καταπίεση (δημιουργία τείχους τόσο στην Δυτική
 	Όχθη όσο και στη Λωρίδα της Γάζας και αμέτρητων check points).<br><br>
-	Όλες οι ενέργειες του ισραηλινού κράτους χαρακτηρίζονται από τη προσπάθεια του
-	να υιοθετήσει την λογική της απανθρωποποίησης εναντίον των Παλαιστινίων, μία
+	<strong style="color: black; font-size :larger;">Όλες οι ενέργειες του ισραηλινού κράτους χαρακτηρίζονται από τη προσπάθεια του
+	να υιοθετήσει την λογική της απανθρωποποίησης εναντίον των Παλαιστινίων</strong>, μία
 	λογική που ουσιαστικά υιοθετήθηκε από το ναζιστικό καθεστώς στην Γερμανία τη
 	δεκαετία του 1930 εναντίον των Εβραίων, των Ρομά, των σωματικά και ψυχολογικά
 	αναπήρων, των Σλάβων αλλά και των κομμουνιστών, από τους χριστιανούς
@@ -146,8 +185,8 @@
 	αλλά και της αδιακόπης διαμάχης για επικράτηση στην παγκόσμια σκακιέρα.
 	Από την πλευρά μας, σε αυτήν την μικρή γωνιά της χώρας με όση δύναμη και
 	αξιοπρέπεια έχουμε, έχουμε διαλέξει πλευρά.<br><br><br>
-	<h3> Αγωνιζόμαστε με αυτούς που δεν
-	έχουν φωνή. Αγωνιζόμαστε με αυτούς που μάχονται για Γη και Ελευθερία.</h3>
+	<h2> Αγωνιζόμαστε με αυτούς που δεν
+	έχουν φωνή. Αγωνιζόμαστε με αυτούς που μάχονται για Γη και Ελευθερία.</h2>
 </p>
 
 <ul class="actions">

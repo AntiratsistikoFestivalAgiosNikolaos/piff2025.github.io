@@ -14,6 +14,12 @@
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script>
+			function toggleMobileMenu() {
+			  const menu = document.getElementById("mobile-menu");
+			  menu.classList.toggle("active");
+			}
+		  </script>
 	</head>
 	<body class="is-preload">
 
@@ -22,11 +28,32 @@
 
 				<!-- Header -->
 					<header id="header">
-						<span class="logo"><a href="index.html" ><img src="images/1.png" alt="" style=" width: 400px; height: 400px; "/></a>
+						<span class="logo"><img src="images/1.png" alt="" style=" width: 400px; height: 400px; "/>
 						</span>
+						<button class="hamburger" onclick="toggleMobileMenu()">☰</button>
+
+						<!-- Mobile Menu (hidden by default) -->
+																<div id="mobile-menu" class="mobile-nav hidden">
+																	<li><a href="index.html" class="active">Αρχική Σελίδα </a></li>
+								
+																	
+																	<li><a href="https://4fund.com/el/n5847t" target="_blank">Ενισχύστε μας Οικονομικά</a></li>
+																	
+																</div>
 					</header>
 					
 				<!-- Main -->
+				<nav id="nav">
+					<ul>
+						<li><a href="index.html" class="active">Αρχική Σελίδα </a></li>
+						
+						
+						
+						
+						<li><a href="https://4fund.com/el/n5847t" target="_blank">Ενισχύστε μας Οικονομικά</a></li>
+						
+					</ul>
+				</nav>
 					<div id="main">
 						
 						<!-- Content -->
@@ -84,7 +111,7 @@
 <ul class="actions">
 	<li><a  href="https://4fund.com/el/n5847t"  target="_blank" class="button">Ενισχύστε Οικομικά την προσπάθεια μας </a></li>	
 </ul>
-<ul><a  href="index.html"  class="button">Αρχική σελλίδα</a></ul>
+<ul><a  href="index.html"  class="button">Αρχική σελίδα</a></ul>
 							</section>
 
 					</div>
