@@ -48,7 +48,7 @@
   .mobile-nav.active {
     display: flex;
     flex-direction: column;
-    background-color: rgb(121, 25, 36); ;
+    background-color: rgb(3, 0, 1); ;
     padding: 10px;
     text-align: center;
   }
@@ -56,6 +56,7 @@
   .mobile-nav a {
     margin: 10px 0;
     text-decoration: none;
+    font-size: 23px;
     color: #eee5e5;
   }
   .mobile-nav {
