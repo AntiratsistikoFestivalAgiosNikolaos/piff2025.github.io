@@ -28,6 +28,10 @@
 }
 /* Mobile screens */
 @media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+  
   .hamburger {
     display: block;
     font-size: 24px;
@@ -41,8 +45,8 @@
     text-align: center;
   }
 
-  .mobile-nav {
-    display: none;
+  .mobile-nav.active {
+    display: flex;
     flex-direction: column;
     background-color: rgb(121, 25, 36); ;
     padding: 10px;
@@ -54,10 +58,11 @@
     text-decoration: none;
     color: #eee5e5;
   }
-
-  .mobile-nav.active {
-    display: flex;
+  .mobile-nav {
+    
+    text-align: center;
   }
+
 }
 .social-buttons {
   display: flex;
