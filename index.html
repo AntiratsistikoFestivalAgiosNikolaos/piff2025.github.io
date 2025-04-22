@@ -11,9 +11,77 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 			
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>@font-face {
-			font-family: "Inter";
-			src: "assets/KenokyLight.ttf" format("truetype");
+		<style>
+			body {
+			  font-family: Arial, sans-serif;
+			}
+		  
+		  
+		
+		/* Fixed hamburger menu styles */
+		.hamburger {
+			display: none;
+		}
+		
+		@media screen and (max-width: 736px) {
+			.hamburger {
+				display: block;
+				position: fixed;
+				top: 20px;
+				right: 20px;
+				z-index: 1000;
+				background-color: rgba(0, 0, 0, 0.7);
+				color: white;
+				border: none;
+				border-radius: 5px;
+				padding: 10px 15px;
+				font-size: 1.5em;
+				cursor: pointer;
+				transition: background-color 0.3s ease;
+			}
+			
+			.hamburger:hover {
+				background-color: rgba(0, 0, 0, 0.9);
+			}
+			
+			#mobileMenu {
+				display: none;
+				position: fixed;
+				top: 70px;
+				right: 20px;
+				background-color: rgba(0, 0, 0, 0.9);
+				border-radius: 5px;
+				padding: 15px;
+				z-index: 999;
+				width: 250px;
+				max-width: 80vw;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			}
+			
+			#mobileMenu.active {
+				display: block;
+			}
+			
+			#mobileMenu li {
+				list-style: none;
+				margin-bottom: 15px;
+			}
+			
+			#mobileMenu li:last-child {
+				margin-bottom: 0;
+			}
+			
+			#mobileMenu a {
+				color: white;
+				text-decoration: none;
+				display: block;
+				padding: 5px 0;
+				transition: color 0.3s ease;
+			}
+			
+			#mobileMenu a:hover {
+				color: #ccc;
+			}
 		}
 		</style>
 		
@@ -27,22 +95,22 @@
 					<header id="header" class="alt">
 						
 						<span class="logo"><img src="images/1.png" alt="" style=" width: 400px; height: 400px; "/></span>
-						<h1 style="font-family: Inter;">Φεστιβάλ Ανεξάρτητου <br>
+						<h1 style="font-family: Inter;">2o Φεστιβάλ Ανεξάρτητου <br>
 							Παλαιστινιακού Κινηματογράφου  2025</h1>
 						<h2>13-14-15 Ιουνίου</h2>
-						<h2>Λεμεσό-Άγιος Νικόλαος - Χανιά </h2>
+						<h2>Λεμεσός-Άγιος Νικόλαος - Χανιά </h2>
 						
 						<button class="hamburger" onclick="toggleMobileMenu()">☰</button>
 
-<!-- Mobile Menu (hidden by default) -->
-										<div id="mobileMenu" class="mobile-nav ">
-											<li><a href="#who" class="active">Η Ομάδα μας</a></li>
-											<li><a href="#which" class="active">Αφιερωμένο στον Dorgham Qrieqa</a></li>
-											<li><a href="#piff">Προβολές και Παράλληλες δράσεις</a></li>
-											<li><a href="palestine.html">Με την Παλαιστίνη</a></li>
-											<li><a href=#money>Ανοιχτή πρόσβαση</a></li>
-											<li><a href="https://4fund.com/el/n5847t" target="_blank">Ενισχύστε μας Οικονομικά</a></li>
-										</div>
+						<!-- Mobile Menu (hidden by default) -->
+						<div id="mobileMenu" class="mobile-nav">
+							<li><a href="#who" class="active">Η Ομάδα μας</a></li>
+							<li><a href="#which" class="active">Αφιερωμένο στον Dorgham Qrieqa</a></li>
+							<li><a href="#piff">Προβολές και Παράλληλες δράσεις</a></li>
+							<li><a href="palestine.html">Με την Παλαιστίνη</a></li>
+							<li><a href=#money>Ανοιχτή πρόσβαση</a></li>
+							<li><a href="https://4fund.com/el/n5847t" target="_blank">Ενισχύστε μας Οικονομικά</a></li>
+						</div>
 						
 						<div class="album">
 							<div class="responsive-container-block bg" >
@@ -139,7 +207,7 @@
 										<p style="font-size: medium;">
 											Πίσω από την επιτυχημένη διοργάνωση του Φεστιβάλ βρίσκονται άνθρωποι και συλλογικότητες που λειτουργούν με βάση την ισότητα και την αλλυλεγγύη,
 δρουν και συμπράτουν από κοινού στις τρεις αυτές πόλεις Λεμεσός, Άγιος Νικόλαος και Χανιά.<br> 
-Εμπνεύστρια της ιδέας, είναι η Παλαιστίνια εικαστικός <a href="#" > Jafra Abu Zoulouf </a> που ζει στη Λεμεσό τα τελευταία χρόνια και σθεναρά προσπαθεί να διαδώσει το τι βιώνει ο
+Εμπνεύστρια της ιδέας, είναι η Παλαιστίνια εικαστικός <a href="#" > Jafra Abu Zoulouf </a> που ζει στη Λεμεσό τα τελευταία χρόνια και σθεναρά προσπαθεί να διαδώσει το τι βιώνει ο
 λαός της μέσω της 7 ης τέχνης. Η ίδια εργάζεται ώστε να εξασφαλίζει τα πνευματικά δικαιώματα των
 δημιουργών και το Φεστιβάλ να παραμένει ανεξάρτητο και χωρίς καμία χρηματοδότηση πέραν των
 εθελοντικών εισφορών.<br>
@@ -253,41 +321,6 @@
 								</div>
 							</section>
 
-						<!-- Second Section -->
-							<!-- <section id="places" class="main special">
-								<header class="major">
-									<h2>Ipsum consequat</h2>
-									<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-									posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
-								</header>
-								<ul class="statistics">
-									<li class="style1">
-										<span class="icon solid fa-code-branch"></span>
-										<strong>5,120</strong> Etiam
-									</li>
-									<li class="style2">
-										<span class="icon fa-folder-open"></span>
-										<strong>8,192</strong> Magna
-									</li>
-									<li class="style3">
-										<span class="icon solid fa-signal"></span>
-										<strong>2,048</strong> Tempus
-									</li>
-									<li class="style4">
-										<span class="icon solid fa-laptop"></span>
-										<strong>4,096</strong> Aliquam
-									</li>
-									<li class="style5">
-										<span class="icon fa-gem"></span>
-										<strong>1,024</strong> Nullam
-									</li>
-								</ul>
-								<p class="content">Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.</p>
-								<footer class="major">
-									<ul class="actions special">
-										<li><a href=# class="button">Learn More</a></li>
-									</ul>
-								</footer>
 							</section> -->
 
 						<!-- Get Started -->
@@ -308,6 +341,7 @@
 									
 								</p>
 							</div>
+							<span class="image"><img src="images/new.jpg"  style=" width: 700px; height: 320px; " /></span>
 								</header>
 								<footer class="major">
 									<ul class="actions special">
@@ -332,13 +366,13 @@
 							</ul>
 						</section>
 						<section>
-							<h2 style="padding-left: 54px;">Eπικοινωνία μαζί μας</h2> 
+							<h2 >Eπικοινωνία μαζί μας</h2> 
 							<dl class="alt">
 								<!-- <dt>Address</dt>
 								<dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd> -->
 								<!-- <dt>Phone</dt>
 								<dd>(000) 000-0000 x 0000</dd> -->
-								<dt style="padding-left: 54px;">Email </dt>
+								<dt >Email </dt>
 								<dd><a href="arfagn2023@gmail.com"> arfagn2023@gmail.com </dd>
 							</dl>
 							<ul class="icons">
@@ -373,4 +407,3 @@
 	</body>
 
 </html>
-

@@ -20,6 +20,79 @@
 			  menu.classList.toggle("active");
 			}
 		  </script>
+		  	<style>
+				body {
+				  font-family: Arial, sans-serif;
+				}
+			  
+			  
+			
+			/* Fixed hamburger menu styles */
+			.hamburger {
+				display: none;
+			}
+			
+			@media screen and (max-width: 736px) {
+				.hamburger {
+					display: block;
+					position: fixed;
+					top: 20px;
+					right: 20px;
+					z-index: 1000;
+					background-color: rgba(0, 0, 0, 0.7);
+					color: white;
+					border: none;
+					border-radius: 5px;
+					padding: 10px 15px;
+					font-size: 1.5em;
+					cursor: pointer;
+					transition: background-color 0.3s ease;
+				}
+				
+				.hamburger:hover {
+					background-color: rgba(0, 0, 0, 0.9);
+				}
+				
+				#mobileMenu {
+					display: none;
+					position: fixed;
+					top: 70px;
+					right: 20px;
+					background-color: rgba(0, 0, 0, 0.9);
+					border-radius: 5px;
+					padding: 15px;
+					z-index: 999;
+					width: 250px;
+					max-width: 80vw;
+					box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+				}
+				
+				#mobileMenu.active {
+					display: block;
+				}
+				
+				#mobileMenu li {
+					list-style: none;
+					margin-bottom: 15px;
+				}
+				
+				#mobileMenu li:last-child {
+					margin-bottom: 0;
+				}
+				
+				#mobileMenu a {
+					color: white;
+					text-decoration: none;
+					display: block;
+					padding: 5px 0;
+					transition: color 0.3s ease;
+				}
+				
+				#mobileMenu a:hover {
+					color: #ccc;
+				}
+			}
+			</style>
 	</head>
 	<body class="is-preload">
 
@@ -159,13 +232,13 @@
 						</ul>
 					</section>
 					<section>
-						<h2 style="padding-left: 54px;">Eπικοινωνία μαζί μας</h2> 
+						<h2 >Eπικοινωνία μαζί μας</h2> 
 						<dl class="alt">
 							<!-- <dt>Address</dt>
 							<dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd> -->
 							<!-- <dt>Phone</dt>
 							<dd>(000) 000-0000 x 0000</dd> -->
-							<dt style="padding-left: 54px;">Email </dt>
+							<dt >Email </dt>
 							<dd><a href="arfagn2023@gmail.com"> arfagn2023@gmail.com </dd>
 						</dl>
 						<ul class="icons">
