@@ -189,6 +189,41 @@ body {
   border-radius: 10px;
 }
 
+.mobile-action-button {
+  display: block;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background-color: #e44c65;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-action-button:hover, .mobile-action-button:focus {
+  background-color: #d83a55;
+  transform: translateX(-50%) translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.mobile-action-button i {
+  margin-right: 8px;
+}
+
 .title {
   
   font-size: 24px;
