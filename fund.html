@@ -37,6 +37,10 @@
 				display: none;
 			}
 			
+			.logo img {
+        width: 230px; /* Set a smaller width for mobile screens */
+        height: auto; /* Maintain the aspect ratio */
+    }
 				.hamburger {
 					display: block;
 					position: fixed;
@@ -105,7 +109,7 @@
 
 				<!-- Header -->
 					<header id="header">
-						<span class="logo"><img src="images/1.png" alt="" style=" width: 400px; height: 400px; "/>
+						<span class="logo"><img src="images/1.png" alt="" />
 						</span>
 						<button class="hamburger" onclick="toggleMobileMenu()">☰</button>
 
@@ -114,12 +118,8 @@
 							<i class="fa fa-heart"></i> Ενισχυστε μας Οικονομικα
 						</a>
 						<div id="mobileMenu" class="mobile-nav">
-																	<li><a href="index.html" class="active">Αρχική Σελίδα </a></li>
-								
-																	
-																	<li><a href="https://4fund.com/el/n5847t" target="_blank">Ενισχύστε μας Οικονομικά</a></li>
-																	
-																</div>
+								<li><a href="index.html" class="active">Αρχική Σελίδα </a></li>
+																	</div>
 					</header>
 					
 				<!-- Main -->
@@ -232,9 +232,9 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script>function toggleMenu() {
-				const navLinks = document.getElementById('navLinks');
-				navLinks.classList.toggle('active');
+			<script>function toggleMobileMenu() {
+				const menu = document.getElementById("mobileMenu"); // Correct id
+				menu.classList.toggle("active");
 			  }</script> 
 
 	</body>
