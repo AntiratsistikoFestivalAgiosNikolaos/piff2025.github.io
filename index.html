@@ -22,11 +22,27 @@
 		.hamburger {
 			display: none;
 		}
+		#prot img {
+    max-width: 100%; /* Ensure the image scales to fit its container */
+    height: auto;    /* Maintain the aspect ratio */
+    display: block;  /* Prevent inline spacing issues */
+    margin: 0 auto;  /* Center the image horizontally */
+}
+
+@media screen and (max-width: 480px) {
+    #prot img {
+        max-width: 80%; /* Further reduce the width for very small screens */
+    }
+}
 		
 		@media screen and (max-width: 736px) {
 			#nophoto{
 				display: none;
 			}
+			#prot img {
+        		max-width: 90%; /* Reduce the width for smaller screens */
+		    }
+
 			.hamburger {
 				display: block;
 				position: fixed;
@@ -339,12 +355,13 @@
 								
 								<span class="image"><img src="images/steki.jpeg" alt="steki metanaston chania" style=" width: 200px; height: 200px; " /></span>
 								
-								<span class="image" id="nophoto"><img src="images/prot.jpeg" alt="protovoulia allileggiis gia tin antistekomeni palestini" style=" width: 560px; height: 210px; " /></span>
+								<span class="image" id="prot"><img src="images/prot.jpeg" alt="protovoulia allileggiis gia tin antistekomeni palestini" style=" width: 560px; height: 210px; " /></span>
 							</div>
 							<div>
 								<p>
 									<a href="https://web.facebook.com/profile.php?id=61551916739831" target="_blank">Αντιρατσιστικό Φεστιβάλ Αγίου Νικολάου</a>  <br>
-									<a href="https://www.facebook.com/share/12K3RAsWASv/" target="_blank">Κοινωνικό Στέκι - Στέκι Μεταναστών Χανιά</a> <br> 										
+									<a href="https://www.facebook.com/share/12K3RAsWASv/" target="_blank">Κοινωνικό Στέκι - Στέκι Μεταναστών Χανιά</a> <br>
+									<a href="#">Πρωτοβουλία για την Αντιστεκόμενη Παλαιστίνη</a> <br> 										 										
 									
 								</p>
 							</div>
