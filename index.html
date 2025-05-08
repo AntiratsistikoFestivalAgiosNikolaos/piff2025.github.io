@@ -102,6 +102,30 @@
 				color: #ccc;
 			}
 		}
+
+		.mobile-action-button {
+    position: fixed; /* Fix the button at a specific position */
+    top: 120px;       /* Distance from the top of the page */
+    left: 50%;       /* Center the button horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    z-index: 1000;   /* Ensure it appears above other elements */
+    background-color: #ff4d4d; /* Button background color */
+    color: white;    /* Button text color */
+    padding: 5px 10px; /* Reduce padding for a smaller button */
+    border: none;    /* Remove border */
+    border-radius: 33px; /* Smaller rounded corners */
+    font-size: 14px; /* Reduce font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-decoration: none; /* Remove underline for links */
+    display: inline-block; /* Ensure proper button styling */
+	width: 300px; /* Ensure the button width adjusts to its content */
+    height: 30px; /* Ensure the height adjusts to its content */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.mobile-action-button:hover {
+    background-color: #e60000; /* Darker background on hover */
+}
 		</style>
 		
 	</head>
