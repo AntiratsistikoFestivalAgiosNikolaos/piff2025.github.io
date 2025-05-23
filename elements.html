@@ -1,346 +1,688 @@
 <!DOCTYPE HTML>
-<!--
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
-		<title>Elements - Stellar by HTML5 UP</title>
+		<title>Piff Crete Lemesos 2025</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="icon" href="images/new.jpg">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			body {
+			  font-family: Arial, sans-serif;
+			}
+		  
+			#piff {
+    padding: 20px;
+    text-align: center;
+}
+
+#piff .content {
+    display: flex;
+    flex-direction: column; /* Stack items vertically by default */
+    align-items: center;
+    gap: 20px; /* Add spacing between items */
+}
+
+#piff ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+#piff ul li {
+    margin: 10px 0;
+}
+
+#piff img {
+    max-width: 100%; /* Ensure images scale to fit their container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Add rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+#piff img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+@media screen and (min-width: 768px) {
+    #piff .content {
+        flex-direction: row; /* Arrange items side by side on larger screens */
+        justify-content: center;
+    }
+
+    #piff ul {
+        display: flex; /* Display list items in a row */
+        gap: 20px; /* Add spacing between list items */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #piff img {
+        max-width: 90%; /* Reduce image size for smaller screens */
+    }
+
+    #piff p {
+        font-size: 0.9em; /* Adjust font size for smaller screens */
+    }
+}
+		
+		/* Fixed hamburger menu styles */
+		.hamburger {
+			display: none;
+		}
+		#prot img {
+    max-width: 100%; /* Ensure the image scales to fit its container */
+    height: auto;    /* Maintain the aspect ratio */
+    display: block;  /* Prevent inline spacing issues */
+    margin: 0 auto;  /* Center the image horizontally */
+}
+
+ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Center the content */
+}
+
+ul li {
+    margin: 10px 0; /* Add spacing between list items */
+}
+
+ul p {
+    font-size: 1.2em; /* Adjust font size for better readability */
+    margin: 0;
+    transition: font-size 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+.responsive-img {
+    max-width: 100%; /* Ensure the image scales to fit its container */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 8px; /* Add rounded corners for smoothness */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.responsive-img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+/* Section Styling */
+#movies {
+    padding: 40px 20px; /* Add padding around the section */
+    background-color: #f9f9f9; /* Light background for better contrast */
+    text-align: center; /* Center-align the content */
+}
+
+#movies .spotlight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Add spacing between elements */
+}
+
+#movies .major h2 {
+    font-size: 2em; /* Increase the font size of the heading */
+    color: #333; /* Darker text color for better readability */
+    margin-bottom: 20px;
+}
+
+/* Image Row Styling */
+.image-row {
+    display: flex; /* Arrange items in a row */
+    justify-content: center; /* Center the thumbnails */
+    gap: 30px; /* Add spacing between thumbnails */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    padding: 20px 0; /* Add vertical padding */
+}
+
+.movie-thumbnail {
+    position: relative; /* For hover effects */
+    width: 200px; /* Fixed width for thumbnails */
+    height: 270px; /* Fixed height for thumbnails */
+    overflow: hidden; /* Ensure images don't overflow */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.movie-thumbnail img {
+    width: 100%; /* Ensure the image fills the container */
+    height: 100%; /* Ensure the image fills the container */
+    object-fit: cover; /* Crop the image to fit the container */
+    border-radius: 10px; /* Match the container's rounded corners */
+}
+.movie-thumbnail p {
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.movie-thumbnail:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Modal Styling */
+#movieModal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+#movieModal iframe {
+    width: 80%;
+    max-width: 800px;
+    height: 450px;
+    border: none;
+    border-radius: 10px; /* Match the design */
+}
+
+#movieModal button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+#movieModal button:hover {
+    background: darkred; /* Darker red on hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .image-row {
+        gap: 20px; /* Reduce gap for smaller screens */
+    }
+
+    #movieModal iframe {
+        width: 90%; /* Adjust modal size for smaller screens */
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .image-row {
+        flex-direction: column; /* Stack thumbnails vertically */
+        gap: 15px; /* Reduce gap further */
+    }
+
+    .movie-thumbnail {
+        width: 100%; /* Full width for smaller screens */
+        height: auto; /* Adjust height automatically */
+    }
+
+    #movieModal iframe {
+        width: 95%; /* Further adjust modal size */
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    ul p {
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+
+    .responsive-img {
+        max-width: 90%; /* Reduce image size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    ul p {
+        font-size: 0.9em; /* Further adjust font size for very small screens */
+    }
+
+    .responsive-img {
+        max-width: 80%; /* Further reduce image size for very small screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #prot img {
+        max-width: 80%; /* Further reduce the width for very small screens */
+    }
+}
+		
+		@media screen and (max-width: 736px) {
+			#nophoto{
+				display: none;
+			}
+			#prot img {
+        		max-width: 90%; /* Reduce the width for smaller screens */
+		    }
+
+			.hamburger {
+				display: block;
+				position: fixed;
+				top: 20px;
+				right: 20px;
+				z-index: 1000;
+				background-color: rgba(0, 0, 0, 0.7);
+				color: white;
+				border: none;
+				border-radius: 5px;
+				padding: 10px 15px;
+				font-size: 1.5em;
+				cursor: pointer;
+				transition: background-color 0.3s ease;
+			}
+			
+			.hamburger:hover {
+				background-color: rgba(0, 0, 0, 0.9);
+			}
+			
+			#mobileMenu {
+				display: none;
+				position: fixed;
+				top: 70px;
+				right: 20px;
+				background-color: rgba(0, 0, 0, 0.9);
+				border-radius: 5px;
+				padding: 15px;
+				z-index: 999;
+				width: 250px;
+				max-width: 80vw;
+				box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			}
+			
+			#mobileMenu.active {
+				display: block;
+			}
+			
+			#mobileMenu li {
+				list-style: none;
+				margin-bottom: 15px;
+			}
+			
+			#mobileMenu li:last-child {
+				margin-bottom: 0;
+			}
+			
+			#mobileMenu a {
+				color: white;
+				text-decoration: none;
+				display: block;
+				padding: 5px 0;
+				transition: color 0.3s ease;
+			}
+			
+			#mobileMenu a:hover {
+				color: #ccc;
+			}
+		}
+		.image-row {
+    display: flex; /* Arrange items in a row */
+    justify-content: flex-start; /* Align items to the left */
+    gap: 10px; /* Add spacing between the images */
+    align-items: center; /* Align items vertically */
+    flex-wrap: nowrap; /* Prevent items from wrapping to the next line */
+    padding: 10px; /* Add padding around the row */
+    box-sizing: border-box; /* Include padding in the element's width */
+}
+
+.image-row .image img {
+    max-width: 100%; /* Ensure images scale to fit their container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%;/* Add rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.image-row .image img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+@media screen and (max-width: 768px) {
+    .image-row {
+        flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+        justify-content: center; /* Center items on smaller screens */
+    }
+
+    .image-row .image img {
+        max-width: 90%; /* Reduce image size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .image-row {
+        flex-direction: column; /* Stack items vertically on very small screens */
+        align-items: center; /* Center items */
+    }
+
+    .image-row .image img {
+        max-width: 80%; /* Further reduce image size for very small screens */
+    }
+}
+
+		.mobile-action-button {
+    position: fixed; /* Fix the button at a specific position */
+    top: 120px;       /* Distance from the top of the page */
+    left: 50%;       /* Center the button horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    z-index: 1000;   /* Ensure it appears above other elements */
+    background-color: #ff4d4d; /* Button background color */
+    color: white;    /* Button text color */
+    padding: 5px 10px; /* Reduce padding for a smaller button */
+    border: none;    /* Remove border */
+    border-radius: 33px; /* Smaller rounded corners */
+    font-size: 14px; /* Reduce font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-decoration: none; /* Remove underline for links */
+    display: inline-block; /* Ensure proper button styling */
+	width: 300px; /* Ensure the button width adjusts to its content */
+    height: 30px; /* Ensure the height adjusts to its content */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.mobile-action-button:hover {
+    background-color: #e60000; /* Darker background on hover */
+}
+		</style>
+		
 	</head>
-	<body class="is-preload">
+	<body class="is-preload" font-family="KenokyLight">
 
 		<!-- Wrapper -->
 			<div id="wrapper">
 
 				<!-- Header -->
-					<header id="header">
-						<h1>Elements</h1>
-						<p>Ipsum dolor sit amet nullam</p>
-					</header>
+					<header id="header" class="alt">
+						
+						<span class="logo"><img src="images/1.png" alt="" style=" width: 400px; height: 400px; "/></span>
+						<h1 style="font-family: Inter;">Πρόγραμμα Ταινιών Φεστιβάλ </h1> 
+						<a href="elements.html" target="_blank" class="mobile-action-button">
+							<i class="fa fa-heart"></i>  Ενισχυστε μας Οικονομικα 
+						</a>
+						<button class="hamburger" onclick="toggleMobileMenu()">☰</button>
+
+						<!-- Mobile Menu (hidden by default) -->
+						
+						<div id="mobileMenu" class="mobile-nav">
+							<li><a href="index.html" class="active">Αρχική Σελίδα </a></li>
+							<li><a href="fund.html">Ανοιχτή πρόσβαση</a></li>
+							<li><a href="elements.html" class="active">Προβολές ταινιών </a></li>
+							
+							
+							
+						</div>
+</header>
+
+<!-- Main -->
+<nav id="nav">
+<ul>
+<li><a href="index.html" class="active">Αρχική Σελίδα </a></li>
+<li><a href="fund.html" class="active">Ανοιχτή Πρόσβαση </a></li>
+<li><a href="elements.html" class="active">Προβολές ταινιών </a></li>
+
+
+</ul>
+</nav>
 
 				<!-- Main -->
 					<div id="main">
 
-						<!-- Content -->
-							<section id="content" class="main">
+						<!-- Introduction -->
+						<section id="whυ" class="main">
+							<div class="spotlight">
+								<div class="content">
+									<header class="major">
+										<h2>Το Φεστιβάλ</h2>
+									</header>
+									<div class="image-row" >
+										<a href="#"><span class="image"><img src="images/34.png" alt="" /></span></a>
+										<a href="#"><span class="image"><img src="images/34.png" alt="" /></span></a>
+										<a href="#"><span class="image"><img src="images/34.png" alt="" /></span></a>
+									</div>
+		
+								</div>
 
-								<!-- Text -->
-									<section>
-										<h2>Text</h2>
-										<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-										This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-										This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-										<hr />
-										<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-										<hr />
-										<h2>Heading Level 2</h2>
-										<h3>Heading Level 3</h3>
-										<h4>Heading Level 4</h4>
-										<hr />
-										<h3>Blockquote</h3>
-										<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-										<h3>Preformatted</h3>
-										<pre><code>i = 0;
 
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-									</section>
-
-								<!-- Lists -->
-									<section>
-										<h2>Lists</h2>
-										<div class="row">
-											<div class="col-6 col-12-medium">
-												<h3>Unordered</h3>
-												<ul>
-													<li>Dolor pulvinar magna etiam.</li>
-													<li>Sagittis sed lorem adipiscing.</li>
-													<li>Felis enim etiam feugiat.</li>
-													<li>Ipsum lorem nullam consequat.</li>
-												</ul>
-												<h3>Alternate</h3>
-												<ul class="alt">
-													<li>Dolor pulvinar magna etiam.</li>
-													<li>Sagittis sed lorem adipiscing.</li>
-													<li>Felis enim etiam feugiat.</li>
-													<li>Ipsum lorem nullam consequat.</li>
-												</ul>
+							</div>
+						</section>
+							<section id="movies" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>Ταινίες</h2>
+										</header>
+										<div class="image-row" style="gap: 30px;">
+											<div class="movie-thumbnail">
+												<a href="https://drive.google.com/file/d/1hd1tW8zLWisCQas2zKyDzcOZ1HDhJx1f/preview" onclick="playMovie(); return false;">
+													<img src="images/jtrailer.png" alt="Movie Thumbnail" style="width: 200px; height: auto; cursor: pointer;">
+												</a>
+									
+												</div>
+												<div class="movie-thumbnail"  style="gap: 30px;">
+													<a href="https://drive.google.com/file/d/1JN0jbdfpJqSii1z6bkA6CINwYMxWxb_6/preview" onclick="playMovie(); return false;">
+														<img src="images/bbt.jpg" alt="Movie Thumbnail" style="width: 200px; height: auto; cursor: pointer;">
+													</a>
+										
 											</div>
-											<div class="col-6 col-12-medium">
-												<h3>Ordered</h3>
-												<ol>
-													<li>Dolor pulvinar etiam.</li>
-													<li>Etiam vel felis viverra.</li>
-													<li>Felis enim feugiat.</li>
-													<li>Dolor pulvinar etiam.</li>
-													<li>Etiam vel felis lorem.</li>
-													<li>Felis enim et feugiat.</li>
-												</ol>
-												<h3>Icons</h3>
-												<ul class="icons">
-													<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-													<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-													<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-													<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-													<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-												</ul>
-												<ul class="icons">
-													<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-													<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-													<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-													<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-													<li><a href="#" class="icon brands alt fa-dribbble"><span class="label">Dribbble</span></a></li>
-												</ul>
-											</div>
+										<div class="movie-thumbnail"  style="gap: 30px;">
+											<a href="https://drive.google.com/file/d/1iy_bVqx2wDZmiYuXfi8EkYrItt3LsBYY/preview" onclick="playMovie(); return false;">
+												<img src="images/lyd .jpg" alt="Movie Thumbnail" style="width: 200px; height: auto; cursor: pointer;">
+											</a>
 										</div>
-										<h2>Actions</h2>
-										<div class="row">
-											<div class="col-6 col-12-medium">
-												<ul class="actions">
-													<li><a href="#" class="button primary">Default</a></li>
-													<li><a href="#" class="button">Default</a></li>
-												</ul>
-												<ul class="actions small">
-													<li><a href="#" class="button primary small">Small</a></li>
-													<li><a href="#" class="button small">Small</a></li>
-												</ul>
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary">Default</a></li>
-													<li><a href="#" class="button">Default</a></li>
-												</ul>
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary small">Small</a></li>
-													<li><a href="#" class="button small">Small</a></li>
-												</ul>
-											</div>
-											<div class="col-6 col-12-medium">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary fit">Default</a></li>
-													<li><a href="#" class="button fit">Default</a></li>
-												</ul>
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary small fit">Small</a></li>
-													<li><a href="#" class="button small fit">Small</a></li>
-												</ul>
-											</div>
+										<div class="movie-thumbnail">
+											<a href="https://drive.google.com/file/d/1sK9PoyhdwettAvRi_P5T2C6zip7cgPm8/preview" onclick="playMovie(); return false;">
+												<img src="images/jtrailer.png" alt="Movie Thumbnail" style="width: 200px; height: auto; cursor: pointer;">
+											</a>
+										
 										</div>
-									</section>
-
-								<!-- Table -->
-									<section>
-										<h2>Table</h2>
-										<h3>Default</h3>
-										<div class="table-wrapper">
-											<table>
-												<thead>
-													<tr>
-														<th>Name</th>
-														<th>Description</th>
-														<th>Price</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Item One</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Two</td>
-														<td>Vis ac commodo adipiscing arcu aliquet.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Three</td>
-														<td> Morbi faucibus arcu accumsan lorem.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Four</td>
-														<td>Vitae integer tempus condimentum.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Five</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-												</tbody>
-												<tfoot>
-													<tr>
-														<td colspan="2"></td>
-														<td>100.00</td>
-													</tr>
-												</tfoot>
-											</table>
+										
 										</div>
 
-										<h3>Alternate</h3>
-										<div class="table-wrapper">
-											<table class="alt">
-												<thead>
-													<tr>
-														<th>Name</th>
-														<th>Description</th>
-														<th>Price</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Item One</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Two</td>
-														<td>Vis ac commodo adipiscing arcu aliquet.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Three</td>
-														<td> Morbi faucibus arcu accumsan lorem.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Four</td>
-														<td>Vitae integer tempus condimentum.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Five</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-												</tbody>
-												<tfoot>
-													<tr>
-														<td colspan="2"></td>
-														<td>100.00</td>
-													</tr>
-												</tfoot>
-											</table>
+										
+										
+										<!-- Modal for Movie -->
+									
+										<div id="movieModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 1000; justify-content: center; align-items: center;">
+											<div style="position: relative; width: 80%; max-width: 800px;">
+												<iframe id="movieFrame" src="" style="width: 100%; height: 450px; border: none;" allowfullscreen></iframe>
+												<button onclick="closeMovie();" style="position: absolute; top: 10px; right: 10px; background: red; color: white; border: none; padding: 10px; cursor: pointer;">Close</button>
+											</div>
 										</div>
-									</section>
+										
+								
+										
+										
+									</div>
+									
+								</div>
+							</section>
 
-								<!-- Buttons -->
-									<section>
-										<h3>Buttons</h3>
-										<ul class="actions">
-											<li><a href="#" class="button primary">Primary</a></li>
-											<li><a href="#" class="button">Default</a></li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button large">Large</a></li>
-											<li><a href="#" class="button">Default</a></li>
-											<li><a href="#" class="button small">Small</a></li>
-										</ul>
-										<ul class="actions fit">
-											<li><a href="#" class="button primary fit">Fit</a></li>
-											<li><a href="#" class="button fit">Fit</a></li>
-											<li><a href="#" class="button fit">Fit</a></li>
-										</ul>
-										<ul class="actions fit small">
-											<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-											<li><a href="#" class="button fit small">Fit + Small</a></li>
-											<li><a href="#" class="button fit small">Fit + Small</a></li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button primary icon solidfa-download">Icon</a></li>
-											<li><a href="#" class="button icon solid fa-upload">Icon</a></li>
-											<li><a href="#" class="button icon solid fa-save">Icon</a></li>
-										</ul>
-										<ul class="actions">
-											<li><span class="button primary disabled">Disabled</span></li>
-											<li><span class="button disabled">Disabled</span></li>
-										</ul>
-									</section>
-
-								<!-- Form -->
-									<section>
-										<h2>Form</h2>
-										<form method="post" action="#">
-											<div class="row gtr-uniform">
-												<div class="col-6 col-12-xsmall">
-													<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-												</div>
-												<div class="col-6 col-12-xsmall">
-													<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-												</div>
-												<div class="col-12">
-													<select name="demo-category" id="demo-category">
-														<option value="">- Category -</option>
-														<option value="1">Manufacturing</option>
-														<option value="1">Shipping</option>
-														<option value="1">Administration</option>
-														<option value="1">Human Resources</option>
-													</select>
-												</div>
-												<div class="col-4 col-12-small">
-													<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-													<label for="demo-priority-low">Low</label>
-												</div>
-												<div class="col-4 col-12-small">
-													<input type="radio" id="demo-priority-normal" name="demo-priority">
-													<label for="demo-priority-normal">Normal</label>
-												</div>
-												<div class="col-4 col-12-small">
-													<input type="radio" id="demo-priority-high" name="demo-priority">
-													<label for="demo-priority-high">High</label>
-												</div>
-												<div class="col-6 col-12-small">
-													<input type="checkbox" id="demo-copy" name="demo-copy">
-													<label for="demo-copy">Email me a copy</label>
-												</div>
-												<div class="col-6 col-12-small">
-													<input type="checkbox" id="demo-human" name="demo-human" checked>
-													<label for="demo-human">Not a robot</label>
-												</div>
-												<div class="col-12">
-													<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-												</div>
-												<div class="col-12">
-													<ul class="actions">
-														<li><input type="submit" value="Send Message" class="primary" /></li>
-														<li><input type="reset" value="Reset" /></li>
+							
+							<section id="which" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>Αφιερωμένο στον Dorgham Qrieqa</h2>
+										</header>
+										<p style="font-size: medium;">
+											Με μεγάλη θλίψη και ραγισμένες καρδιές θρηνούμε την απώλεια του <br>
+											<strong>Dorgham Qrieqa και της συζύγου του Aya Qudra</strong>
+											<br>
+											οι οποίοι μαρτύρησαν κατά τη μεγάλη επίθεση που έγινε
+											αμέσως μετά την κατάρρευση της εκεχειρίας.<br>
+											Ο Dorgham ήταν ένας φίλος, ένας προικισμένος καλλιτέχνης, ένας καταπληκτικός
+											άνθρωπος και ακτιβιστής που αφιέρωσε τη ζωή του στο να βοηθήσει και να φέρει χαρά
+											στα παιδιά της Γάζας αυτούς τους τελευταίους σκοτεινούς 17 μήνες, και για εμάς είναι
+											ένας πραγματικός ήρωας!<br>
+											Θα σε θυμόμαστε πάντα Dorgham και είμαστε ευγνώμονες που σε γνωρίζουμε.<br>
+											Είθε η ψυχή σου να αναπαύεται εν ειρήνη ♥️<br>
+											<h3>Αυτό το Φεστιβάλ είναι αφιερωμένο στην μνήμη του.</h3>
+											</p>
+										<!-- <ul class="actions">
+											<li><a  href="festival.html"  class="button">Διαβάστε περισσότερα</a></li>
+										</ul> -->
+									</div>
+									<span class="image"><img src="images/qur.jpg" alt="" /></span>
+								</div>
+							</section>
+						<!-- First Section -->
+							<section id="piff" class="main special">
+								<header class="major">
+									<h2>Οι ταινίες που θα προβάλουμε στις 13-14-15 Ιουνίου σε <br>
+										Λεμεσό, Άγιος Νικόλαο και Χανιά</h2>
+									</header>
+										<div class="content">
+											<ul style="list-style: none; padding: 0; margin: 0; text-align: center;">
+												<li>
+													<p style="font-size: medium; margin: 10px 0;">Παρασκευή 13 Ιουνίου 2025 <br>Παρασκευή 13 Ιουνίου 2025</p>
+													<ul style="list-style: none; padding: 0; margin: 0;">
+														<li>
+															<p style="font-size: medium; margin: 10px 5;">
+																<span class="logo">
+																	<a href="elements.html#m2"> <img  src="images/1.jpeg" alt="" >
+																	</a>
+																	</span>
+															</p>
+															<p>
+																<a href="elements.html"> Ομλιιτες ζοι + ταδε
+																	</a>
+															</p>
+														</li>
 													</ul>
-												</div>
-											</div>
-										</form>
-									</section>
+												</li>
+												<li>
+													<p style="font-size: medium; margin: 10px 0;">Σάββατο 14 Ιουνίου </p>
+													<ul style="list-style: none; padding: 0; margin: 0; " >
+														<li>
+															<div style="display: flex; justify-content: center; gap: 20px; align-items: center;">
+																<div>
+																	<a href="elements.html">
+																		<img src="images/1.jpeg" alt="Image 1" >
+																	</a>
+																</div>
+																<div>
+																	<a href="elements.html">
+																		<img src="images/2.jpeg" alt="Image 2" >
+																	</a>
+																</div>
+															</div>
+															</p>
+														</li>
+													</ul>
+												</li>
+												<li>
+													<p style="font-size: medium; margin: 10px 0;">Κυριακή 15 Ιουνίου</p>
+													<ul style="list-style: none; padding: 0; margin: 0;">
+														<li>
+															<p style="font-size: medium; margin: 10px 5;">
+																<span class="logo">
+																	<a href="elements.html"> <img  src="images/1.jpeg" alt="" >
+																	</a>
+																	</span>
+															</p>
+															<a href="elements.html"> Ομλιιτες ζοι + ταδε
+															</a>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										
 
-								<!-- Image -->
-									<section>
-										<h2>Image</h2>
-										<h3>Fit</h3>
-										<div class="box alt">
-											<div class="row gtr-uniform">
-												<div class="col-12"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-											</div>
+											
 										</div>
-										<h3>Left &amp; Right</h3>
-										<p><span class="image left"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent lorem ipsum dolor sit amet veroeros consequat. Etiam tempus lorem ipsum.</p>
-										<p><span class="image right"><img src="images/pic06.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus..</p>
-									</section>
+								
+								<!-- <ul class="features">
+									<li>
+										<a href ="#"><span class="icon major style3 fa-copy"></span></a>
+										<h3>Προβολές Στη Λεμεσό</h3>
+										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+										
+									</li>
+									<li>
+										<a href ="#"><span class="icon major style3 fa-copy"></span></a>
+										<h3>Προβολές στον Άγιο Νικόλαο</h3>
+										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+									</li>
+									<li>
+										<a href ="#"><span class="icon major style3 fa-copy"></span></a>
+										<h3>Προβολές στα Χανιά</h3>
+										<p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+									</li>
+								</ul> -->
+								
+								<footer class="major">
+									<!-- <ul class="actions special">
+										<li><a href=# class="button">Διαβάστε περισσότερα</a></li>
+									</ul> -->
+								</footer>
+							</section>
+							<section id="money" class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>Q+Α</h2>
+										</header>
+										<p style="font-size: medium;">
+											Το PIFF είναι εντελώς ανεξάρτητο και μη κερδοσκοπικό, αντι-εμπορικό με κύριο στόχο να διασφαλίσει ότι οι
+											παλαιστινιακές φωνές θα φτάσουν σε όσο το δυνατόν περισσότερα ακροατήρια, χωρίς αποκλεισμούς
+											-ιδιαίτερα για όσους έχουν λιγότερους πόρους.<br>
+											 Πιστεύουμε ότι η τέχνη και ο κινηματογράφος είναι
+											για τις μάζες και πρέπει να είναι προσβάσιμα σε όλους. Ως εκ τούτου, η πρόσβαση στο Φεστιβάλ είναι
+											δωρεάν και ανοιχτή σε όλους με <strong><a  style="color: red; font-size: medium;" href="https://4fund.com/el/n5847t"  target="_blank" >ελεύθερη συνεισφορά</a></strong>  
+											 για να καλυφθούν τα έξοδα της
+											τριήμερης διοργάνωσης .
+</p><ul class="actions">
+	<li><a  href="fund.html"  class="button">Διαβάστε περισσότερα</a></li>
+</ul>
+									</div>
+									<span class="image"><img src="images/34.png" alt="" /></span>
+								</div>
+							</section>
 
+							</section> 
+
+						<!-- Get Started -->
+							<section id="cta" class="main special">
+								<header class="major">
+									<h2>Διοργανωτές</h2>
+							<div>
+								<span class="image"><img src="images/front.png" alt="antiratsistiko agiou nikolaou" style=" width: 200px; height: 200px; " /></span>
+								
+								<span class="image"><img src="images/steki.jpeg" alt="steki metanaston chania" style=" width: 200px; height: 200px; " /></span>
+								
+								<span class="image" id="prot"><img src="images/prot.jpeg" alt="protovoulia allileggiis gia tin antistekomeni palestini" style=" width: 560px; height: 210px; " /></span>
+							</div>
+							<div>
+								<p>
+									<a href="https://web.facebook.com/profile.php?id=61551916739831" target="_blank">Αντιρατσιστικό Φεστιβάλ Αγίου Νικολάου</a>  <br>
+									<a href="https://www.facebook.com/share/12K3RAsWASv/" target="_blank">Κοινωνικό Στέκι - Στέκι Μεταναστών Χανιά</a> <br>
+									<a href="#">Πρωτοβουλία για την Αντιστεκόμενη Παλαιστίνη</a> <br> 										 										
+									
+								</p>
+							</div>
+							<span class="image" id="nophoto" ><img src="images/new.jpg"  style=" width: 700px; height: 320px; " /></span>
+								</header>
+								<footer class="major">
+									<ul class="actions special">
+										<!-- <li><a href=# class="button primary">Get Started</a></li>
+										<li><a href=# class="button">Learn More</a></li> -->
+										
+									</ul>
+								</footer>
 							</section>
 
 					</div>
@@ -348,31 +690,35 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
-							<h2>Aliquam sed mauris</h2>
-							<p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
-							<ul class="actions">
-								<li><a href="#" class="button">Learn More</a></li>
+							
+							<h2 id="nophoto">Δείτε τις προηγούμενες μας δράσεις </h2>
+									
+							<ul class="actions" style="padding-left: 245px;" id="nophoto">
+								<a href="https://www.youtube.com/@AntiratsistikoFestivalAgiosNik" target="_blank" class="fa fa-youtube-square" 
+								style="font-size:64px;" id="nophoto"></a>
 							</ul>
 						</section>
 						<section>
-							<h2>Etiam feugiat</h2>
+							<h2 >Eπικοινωνία μαζί μας</h2> 
 							<dl class="alt">
-								<dt>Address</dt>
-								<dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
-								<dt>Phone</dt>
-								<dd>(000) 000-0000 x 0000</dd>
-								<dt>Email</dt>
-								<dd><a href="#">information@untitled.tld</a></dd>
+								<!-- <dt>Address</dt>
+								<dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd> -->
+								<!-- <dt>Phone</dt>
+								<dd>(000) 000-0000 x 0000</dd> -->
+								<dt >Email </dt>
+								<dd><a href="piffcretelemesos@gmail.com"> piffcretelemesos@gmail.com </dd>
 							</dl>
 							<ul class="icons">
-								<li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
+								<!-- <li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li> -->
+								<!-- <li><a href="https://web.facebook.com/profile.php?id=61551916739831#" target="_blank"class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
+								<li><a href="https://www.instagram.com/antiracism_festival_agnikolaou/" target="_blank" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li> -->
+								
+								</a></li>
+								<!-- <li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li> -->
+								<!-- <li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li> -->
 							</ul>
 						</section>
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<!-- <p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p> -->
 					</footer>
 
 			</div>
@@ -385,6 +731,38 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script>
+				function toggleMobileMenu() {
+					const menu = document.getElementById("mobileMenu");
+					menu.classList.toggle("active");
+				}
+			
+				// Close the menu when clicking outside
+				document.addEventListener("click", function (event) {
+					const menu = document.getElementById("mobileMenu");
+					const hamburger = document.querySelector(".hamburger");
+			
+					// Check if the click is outside the menu and the hamburger button
+					if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+						menu.classList.remove("active");
+					}
+				});
+			</script>
+			<script>
+				function playMovie() {
+					const modal = document.getElementById('movieModal');
+					const frame = Elementdocument.getById('movieFrame');
+					frame.src = "https://drive.google.com/file/d/1sK9PoyhdwettAvRi_P5T2C6zip7cgPm8/preview";
+					modal.style.display = "flex";
+				}
+			
+				function closeMovie() {
+					const modal = document.getElementById('movieModal');
+					const frame = document.getElementById('movieFrame');
+					frame.src = ""; // Stop the video
+					modal.style.display = "none";
+				}
+			</script>
 	</body>
+
 </html>
