@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Piff Crete Lemesos</title>
+		<title>Piff Crete Lemesos 2025</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -124,16 +124,20 @@
 						</a>
 						<div id="mobileMenu" class="mobile-nav">
 								<li><a href="index.html" class="active">Αρχική Σελίδα </a></li>
+								<!-- <li><a href="elements.html" class="active">Προβολές ταινιών </a></li> -->
 																	</div>
 					</header>
 					
 				<!-- Main -->
 				<nav id="nav">
-					<ul>
-						<li><a href="index.html" class="active">Αρχική Σελίδα </a></li>
-						
-						
-					</ul>
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html" class="active">Αρχική Σελίδα </a></li>
+							<!-- <li><a href="elements.html" class="active">Προβολές ταινιών </a></li> -->
+		
+							
+						</ul>
+					</nav>
 				</nav>
 					<div id="main">
 						
@@ -236,10 +240,23 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script>function toggleMobileMenu() {
-				const menu = document.getElementById("mobileMenu"); // Correct id
-				menu.classList.toggle("active");
-			  }</script> 
+			<script>
+				function toggleMobileMenu() {
+					const menu = document.getElementById("mobileMenu");
+					menu.classList.toggle("active");
+				}
+			
+				// Close the menu when clicking outside
+				document.addEventListener("click", function (event) {
+					const menu = document.getElementById("mobileMenu");
+					const hamburger = document.querySelector(".hamburger");
+			
+					// Check if the click is outside the menu and the hamburger button
+					if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+						menu.classList.remove("active");
+					}
+				});
+			</script>
 
 	</body>
 </html>

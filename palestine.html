@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Piff Crete Lemesos</title>
+		<title>Piff Crete Lemesos 2025</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -129,6 +129,7 @@
 						<div id="mobileMenu" class="mobile-nav">
 							<li><a href="index.html" class="active">Αρχική Σελίδα </a></li>
 							<li><a href="fund.html">Ανοιχτή πρόσβαση</a></li>
+							<!-- <li><a href="elements.html" class="active">Προβολές ταινιών </a></li> -->
 
 							
 						</div>
@@ -137,9 +138,9 @@
 					<div class="image-container">
 						<ul class="socialmediaicons">
 							
-						  <span style="margin: 13px;"><a href="https://www.facebook.com/share/192C2CjZSj/?mibextid=wwXIfr" target="_blank"><i class="fa 
-					  fa-facebook" style="font-size: 64px;" ></i></a></span>
-						  <span><a href="https://www.instagram.com/piff_limassol_crete?igsh=OGRtcm4waHFkeWhh&utm_source=qr" target="_blank"><i class="fa fa-instagram" style="font-size: 64px;"></i></a></ul></span>
+						  <!-- <span style="margin: 13px;"><a href="https://www.facebook.com/share/192C2CjZSj/?mibextid=wwXIfr" target="_blank"><i class="fa  -->
+					  <!-- fa-facebook" style="font-size: 64px;" ></i></a></span> -->
+						  <!-- <span><a href="https://www.instagram.com/piff_limassol_crete?igsh=OGRtcm4waHFkeWhh&utm_source=qr" target="_blank"><i class="fa fa-instagram" style="font-size: 64px;"></i></a></ul></span> -->
 						  
 						  </ul>
 						</div>
@@ -148,6 +149,8 @@
 				<nav id="nav">
 					<ul>
 						<li><a href="index.html" class="active">Αρχική Σελίδα </a></li>
+						<li><a href="fund.html" class="active">Ανοιχτή Πρόσβαση </a></li>
+						<!-- <li><a href="elements.html" class="active">Προβολές ταινιών </a></li> -->
 						
 						
 					</ul>
@@ -330,11 +333,22 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script>function toggleMobileMenu() {
-				const menu = document.getElementById("mobileMenu"); // Correct id
-				menu.classList.toggle("active");
-			}
-			  </script> 
-
+			<script>
+				function toggleMobileMenu() {
+					const menu = document.getElementById("mobileMenu");
+					menu.classList.toggle("active");
+				}
+			
+				// Close the menu when clicking outside
+				document.addEventListener("click", function (event) {
+					const menu = document.getElementById("mobileMenu");
+					const hamburger = document.querySelector(".hamburger");
+			
+					// Check if the click is outside the menu and the hamburger button
+					if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+						menu.classList.remove("active");
+					}
+				});
+			</script>
 	</body>
 </html>
