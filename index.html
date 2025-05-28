@@ -99,6 +99,38 @@ img {
 .modal-content button:hover {
     background: darkred;
 }
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .modal-content {
+        width: 90%; /* Adjust modal width for smaller screens */
+        padding: 15px; /* Reduce padding */
+    }
+
+    .modal-content p {
+        font-size: 0.9em; /* Reduce font size for smaller screens */
+    }
+
+    .modal-content button {
+        font-size: 0.9em; /* Reduce button font size */
+        padding: 8px 12px; /* Adjust button padding */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .modal-content {
+        width: 95%; /* Further adjust modal width for very small screens */
+        padding: 10px; /* Reduce padding further */
+    }
+
+    .modal-content p {
+        font-size: 0.8em; /* Further reduce font size */
+    }
+
+    .modal-content button {
+        font-size: 0.8em; /* Further reduce button font size */
+        padding: 6px 10px; /* Adjust button padding */
+    }
+}
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
