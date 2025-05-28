@@ -20,6 +20,77 @@
     padding: 20px;
     text-align: center;
 }
+.thumbnail {
+    width: 150px; /* Thumbnail size */
+    height: auto;
+    cursor: pointer;
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.thumbnail:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center; /* Center-align text */
+    max-width: 90%;
+    width: 400px;
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    font-size: 1em;
+    color: #333;
+}
+
+.modal-content button {
+    background: red;
+    color: white;
+    border: none;
+    padding: 0px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.modal-content button:hover {
+    background: darkred;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .modal-content {
+        width: 90%; /* Adjust modal width for smaller screens */
+    }
+}
 
 #piff .content {
     display: flex;
@@ -172,18 +243,9 @@ ul p {
 }
 
 /* Image Styling */
-#piff .content {
-    display: flex; /* Arrange items in a row */
-    justify-content: center; /* Center the images horizontally */
-    align-items: center; /* Align items vertically */
-    gap: 20px; /* Add spacing between images */
-    flex-wrap: nowrap; /* Prevent wrapping to the next line */
-    overflow-x: auto; /* Allow horizontal scrolling if needed */
-}
-
 #piff .content img {
-    width: 200px; /* Set a fixed width for all images */
-    height: 270px; /* Set a fixed height for all images */
+    width: 282px; /* Set a fixed width for all images */
+    height: 282px; /* Set a fixed height for all images */
     object-fit: cover; /* Ensure images fit within their container without distortion */
     border-radius: 8px; /* Add rounded corners */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
@@ -194,18 +256,12 @@ ul p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
 }
 
-/* Flexbox for Images */
-#piff .content div {
-    display: flex;
+#piff .content {
+    display: flex; /* Arrange items in a row */
     justify-content: center; /* Center the images horizontally */
+    align-items: center; /* Align items vertically */
     gap: 20px; /* Add spacing between images */
     flex-wrap: wrap; /* Allow wrapping on smaller screens */
-}
-
-#piff .content div img {
-    width: 200px; /* Set a fixed width for images */
-    height: 280px; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure images fit within their container */
 }
 
 /* Responsive Design */
@@ -348,7 +404,7 @@ ul p {
 						<h2>13-14-15 Ιουνίου</h2>
 						<h2>Λεμεσός - Άγιος Νικόλαος - Χανιά </h2>
 						<a href="fund.html" target="_blank" class="mobile-action-button">
-							<i class="fa fa-heart"></i> Ενησχυστε μας Οικονομικα 
+							<i class="fa fa-heart">Πρόγραμα προβολών</i>
 						</a>
 						<button class="hamburger" onclick="toggleMobileMenu()">☰</button>
 
@@ -356,7 +412,7 @@ ul p {
 						<div id="mobileMenu" class="mobile-nav">
 							<li><a href="#who" class="active">Γνωρίστε μας</a></li>
 							<li><a href="#which" class="active">Αφιερωμένο στον Dorgham Qrieqa</a></li>
-							<li><a href="#piff">Προβολές και Παράλληλες δράσεις</a></li>
+							<li><a href="#piff">Oι Προβολές του Φεστιβάλ</a></li>
 							<li><a href="palestine.html">Με την Παλαιστίνη</a></li>
 							<li><a href=#money>Ανοιχτή πρόσβαση</a></li>
 							
@@ -412,7 +468,7 @@ ul p {
 						<ul>
 							<li><a href="#who" class="active">Γνωρίστε μας</a></li>
 							<li><a href="#which" class="active">Αφιερωμένο στον Dorgham Qrieqa</a></li>
-							<li><a href="#piff">Προβολές και Παράλληλες δράσεις</a></li>
+							<li><a href="#piff">Oι Προβολές του Φεστιβάλ</a></li>
 							<li><a href="palestine.html">Με την Παλαιστίνη</a></li>
 							<li><a href=#money>Ανοιχτή πρόσβαση</a></li>
 							
@@ -503,24 +559,27 @@ ul p {
 						<!-- First Section -->
 							<section id="piff" class="main special">
 								<header class="major">
-									<h2>Δείτε εδω τα τραίλερ <br>
-										των ταινίων που θα προβάλουμε στο 2ο PIFF <br>
-										σε Λεμεσό, Άγιο Νικόλαο και Χανιά</h2>
+									<h2>Δείτε εδώ τα trailer των ταινιών που θα προβάλουμε</h2>
 									</header>
 										<div class="content">
+											<h3>   </h3>
 											<ul style="list-style: none; padding: 0; margin: 0; text-align: center;">
 												<li>
 													
 													<ul style="list-style: none; padding: 0; margin: 0;">
 														<li>
 															<p style="font-size: medium; margin: 10px 5;">
+																
 																<span class="logo">
 																	<a href="https://drive.google.com/file/d/1hd1tW8zLWisCQas2zKyDzcOZ1HDhJx1f/preview" onclick="playMovie(); return false;">
 																		 <img  src="images/jtrailer.png" alt="" >
-																		 <p style="font-size: medium; margin: 10px 0;">Janin Jenin <br> 2024-Σκηνοθεσία : Muhammad Bakri </p>	 
+																		  	 
 																	</a>
+																	<p style="font-size: medium; margin: 10px 0;">
+																	 <a href="elements.html#jj">Janin Jenin <br> 2024-Σκηνοθεσία : Muhammad Bakri <br>
+																		Διαβάστε περισσότερα εδώ</a>
 																	
-																	</span>
+																</p>
 															</p>
 														
 														</li>
@@ -533,23 +592,27 @@ ul p {
 															
 															<div style="display: flex; justify-content: flrx; gap: 20px; align-items: center;">
 																<div>
-																	
+																	<p style="font-size: medium; margin: 10px 0;">
+																
 																	<span>
 																	<a href="https://drive.google.com/file/d/1JN0jbdfpJqSii1z6bkA6CINwYMxWxb_6/preview" onclick="playMovie(); return false;">
 																		<img src="images/bbt.jpg" alt="Image 1" ></a>
-																	<a href="#">
-																		<p style="font-size: medium; margin: 10px 0;">Bye Bye Tiberias <br> 2023-Σκηνοθεσία : Lina Soualem </p>	
+																	<a href="elements.html#bbt">
+																		<p style="font-size: medium; margin: 10px 0;">Bye Bye Tiberias <br> 2023-Σκηνοθεσία : Lina Soualem <br> Διαβάστε περισσότερα εδώ</p>	
 																	</a>
+																	
 																</p>
 																	</span>
 																	<span>
-																	
+																		
 																	<a href="https://drive.google.com/file/d/1iy_bVqx2wDZmiYuXfi8EkYrItt3LsBYY/preview" onclick="playMovie(); return false;">
 																		<img src="images/lyd .jpg" alt="Image 2" > </a>
-																	<a href="#">														
-																		<p style="font-size: medium; margin: 10px 0;">Lyd <br> 2024 Σκηνοθεσία : <br> Rami Younis & Sarah Ema Friedland</p>	
-																	</a>
-																	</span>
+																		<p style="font-size: medium; margin: 10px 0;">
+																			<a href="elements.html#lyd">Lyd 2024<br> Σκηνοθεσία :  Rami Younis & Sarah Ema Friedland <br>
+																			   Διαβάστε περισσότερα εδώ</a>
+																		   
+																	   </p>
+																	
 																</div>
 															</div>
 															</p>
@@ -561,10 +624,17 @@ ul p {
 													<ul style="list-style: none; padding: 0; margin: 0;">
 														<li>
 															<p style="font-size: medium; margin: 10px 5;">
+																
 																<span class="logo">
 																	<a href="https://drive.google.com/file/d/1sK9PoyhdwettAvRi_P5T2C6zip7cgPm8/preview" onclick="playMovie(); return false;">
 																		<img  src="images/stp.jpg" alt="" >
-																		<p style="font-size: medium; margin: 10px 0;">A state of passion <br> 2024 Σκηνοθεσία : <br> Carol Mansour & Muna Khailidi</p>
+																		<p style="font-size: medium; margin: 10px 0;">
+																			<a href="elements.html#stp">
+																			A state of passion 2024 
+																			<br> Σκηνοθεσία : Carol Mansour & Muna Khailidi<br>
+																			Διαβάστε περισσότερα εδώ</p>
+																			</a>
+																		</p>
 																	</a>
 																	</span>
 															</p>
@@ -575,16 +645,110 @@ ul p {
 												</li>
 											</ul>
 										
+											<div class="content">
+												<h1>Οι κεντρικοί ομιλητές του Φεστιβαλ</h1>
+												<ul style="list-style: none; padding: 0; margin: 0; text-align: center;">
+													
+														
+														<ul style="list-style: none; padding: 0; margin: 0;">
+															<li>
+																<div style="display: flex; justify-content: center; gap: 20px; align-items: center;">
+																	
+																			<img src="images/Nasim Alatras.jpg" alt="Image 1" class="thumbnail" onclick="openModal('modal1'); return false;">
+																</div>
+																<h2> Nasim Alatras</h2>
+															</li>
+														</ul>
 											
+												
+														<ul style="list-style: none; padding: 0; margin: 0;">
+														<li>
+															<div style="display: flex; justify-content: center; gap: 20px; align-items: center;">
+																		
+																<img src="images/Zoie Sgourou.jpg" alt="Image 2" class="thumbnail" onclick="openModal('modal2'); return false;">
+															
+														</div>
+														<h2> Zoie Sgourou</h2>
+															</li>
+														</ul>
+														<ul style="list-style: none; padding: 0; margin: 0;">
+													
+															<li>
+																<div style="display: flex; justify-content: center; gap: 20px; align-items: center;">
+																	<img src="images/Mirei El Sayed.jpg" alt="Image 3" class="thumbnail" onclick="openModal('modal3'); return false;">
+																</div>
+																<h2>Mirei El Sayed</h2>
+															</li>
+															
+														</ul>
+														
+													
+												</ul>
+											</div>
+											
+											<!-- Modal Structure -->
+											<div id="modal1" class="modal">
+												<div class="modal-content">
+													<img src="images/Nasim Alatras.jpg" alt="Image 1">
+													<p>O Nasim Alatras γεννήθηκε στο ǹμμάν της Ιορδανίας το 1965. <br>
+														Είναι
+														Παλαιστίνιος δημοσιογράφος και αρθρογράφος. Ǽργάστηκε για σειρά
+														ετών στην εφημερίδα ελευθεροτυπία.<br>
+														Πρωτοήρθε στην Ελλάδα το 1983 για σπουδές στη Βιομηχανική Σχολή
+														Θεσσαλονίκης. Υπήρξε ενεργό μέλος του Δ.Σ. της Γενικής Ένωσης
+														Παλαιστίνιων Φοιτητών και συνιδρυτής της πρώτης
+														Ελληνοπαλαιστινιακής επιτροπής Υποστήριξης της Πρώτης Ιντιφάντα.
+														Έχει μεταφράση στα ελληνικά το 1999 δύο νουβέλες του Παλαιστίνιου
+														συγγραφέα Γασάν Ȁαναφάνι. Είναι παραγωγός του ντοκιμαντέρ <Br>"Γάζα Eρχόμαστε" για λογαριασμό του αραβικού τηλεοπτικού σταθμού αλτζαζίρα και του ντοκιμαντερ «ο ασκός του αιόλου».<br>
+														</p>
+													<button onclick="closeModal('modal1')">Close</button>
+												</div>
+											</div>
+											
+											<div id="modal2" class="modal">
+												<div class="modal-content">
+													<img src="images/Zoie Sgourou.jpg" alt="Image 2">
+													<p>Η Ζωή Ζγουρού είναι Ελληνίδα σκηνοθέτιδα. Σπούδασε
+														ιστορία κινηματογράφου στο Λονδίνο και ολοκλήρωσε
+														την κινηματογραφική της εκπαίδευση στην Αθήνα.
+														Ξεκινησε την καριέρα της ως πρώτη βοηθός
+														σκηνοθέτη, στην συνέχεια σκηνοθέτησε δύο ταινίες
+														μικρού μήκους και την τηλεοπτική σειρά ´Μια νύχτα του
+														Αυγούστου’ για τον εθνικό ραδιοτηλεοπτικό φορέα της
+														Ελλάδας, την ΕΡΤ. Έχει συμμετάσχει σε πολλές
+														διεθνείς παραγωγές που γυρίστηκαν στην Ǽλλάδα και
+														έχει τη δική της εταιρεία παραγωγής. Σε τακτά χρονικά
+														διαστήματα διευθύνει masterclasses για ηθοποιούς και
+														επαγγελματίες του κινηματογράφου</p>
+													<button onclick="closeModal('modal2')">Close</button>
+												</div>
+											</div>
+											
+											<div id="modal3" class="modal">
+												<div class="modal-content">
+													<img src="images/Mirei El Sayed.jpg" alt="Image 3">
+													<p>H Mιρέιγ eλ Σαίντ, ελληνοπαλαιστινιακής καταγωγής, είναι
+														πτυχιούχος Αρχιτέκτων Εσωτερικών Χώρων και ενεργό μέλος της
+														Παλαιστινιακής Παροικίας Ελλάδας, με ιδιαίτερη έμφαση στην
+														ανθρωπιστική δράση. Έχει διοργανώσει και συμμετάσχει σε
+														εκδηλώσεις που στοχεύουν στην ενημέρωση του κοινού σχετικά
+														με την κατάσταση στην Παλαιστίνη, ενώ έχει αναλάβει καμπάνιες
+														αλληλεγγύης για την υποστήριξη των ανθρώπων στη Γάζα.
+														Ανάμεσα στις πρωτοβουλίες της, ξεχωρίζει η επιμέλεια της
+														φωτογραφικής έκθεσης με τίτλο “Is Anyone Alive? The Language
+														of Communication in Gaza”, με φωτογραφίες από φωτορεπόρτερ
+														και φωτογράφους της Γάζας, <br>καθώς και η δημιουργία του<br>
+														συνοδευτικού e-booklet.</p>
+													<button onclick="closeModal('modal3')">Close</button>
+												</div>
+											</div>
 										<div id="movieModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 1000; justify-content: center; align-items: center;">
 											<div style="position: relative; width: 80%; max-width: 800px;">
 												<iframe id="movieFrame" src="" style="width: 100%; height: 450px; border: none;" allowfullscreen></iframe>
 												<button onclick="closeMovie();" style="position: absolute; top: 10px; right: 10px; background: red; color: white; border: none; padding: 10px; cursor: pointer;">Close</button>
 											</div>
 										</div>
-										
-
-											<h3>Το αναλυτικό πρόγραμμα των προβολών με τους ομιλητές θα ανακοινωθεί προσεχώς </h3>	
+											
 										</div>
 								
 								<!-- <ul class="features">
@@ -719,16 +883,27 @@ ul p {
 					menu.classList.toggle("active");
 				}
 			
-				// Close the menu when clicking outside
-				document.addEventListener("click", function (event) {
-					const menu = document.getElementById("mobileMenu");
-					const hamburger = document.querySelector(".hamburger");
-			
-					// Check if the click is outside the menu and the hamburger button
-					if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
-						menu.classList.remove("active");
-					}
-				});
+				function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = 'flex'; // Show the modal
+    }
+}
+
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = 'none'; // Hide the modal
+    }
+}
+function handleOutsideClick(event) {
+    const modalContent = event.currentTarget.querySelector('.modal-content');
+    if (!modalContent.contains(event.target)) {
+        event.currentTarget.style.display = 'none'; // Close the modal
+    }
+}
+
+				
 			</script>
 	</body>
 
