@@ -133,20 +133,22 @@ ul p {
 
 /* Image Row Styling */
 .image-row {
+	width: 100%; /* Full width for the image row */
+	height: 100%;
     display: flex; /* Arrange items in a row */
     justify-content: center; /* Center the thumbnails */
     gap: 30px; /* Add spacing between thumbnails */
     flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    padding: 20px 0; /* Add vertical padding */
+    padding: 10px 0; /* Add vertical padding */
 }
 
 .movie-thumbnail {
     position: relative; /* For hover effects */
-    width: 200px; /* Fixed width for thumbnails */
-    height: 270px; /* Fixed height for thumbnails */
+    width: 340px; /* Fixed width for thumbnails */
+    height: 420px; /* Fixed height for thumbnails */
     overflow: hidden; /* Ensure images don't overflow */
     border-radius: 10px; /* Add rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); Subtle shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
 }
 
@@ -397,6 +399,80 @@ ul p {
 .mobile-action-button:hover {
     background-color: #e60000; /* Darker background on hover */
 }
+span.image1 img {
+    width: 100%; /* Make the image responsive */
+    max-width: 400px; /* Set a maximum width for the image */
+    height: 200px; /* Set a fixed height to make it rectangular */
+    object-fit: cover; /* Ensure the image fills the container without distortion */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    display: block; /* Prevent inline spacing issues */
+    margin: 0 auto; /* Center the image horizontally */
+}
+			.row-container {
+    display: flex; /* Use Flexbox to arrange items in a row */
+    align-items: center; /* Align items vertically in the center */
+    justify-content: center; 
+    gap: 10px; 
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+.image-text {
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center-align the content */
+    text-align: center; /* Center-align the text */
+}
+			.row-container .image1 img {
+    width: 340px; /* Set a fixed width for the images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Add rounded corners */
+    object-fit: cover; /* Ensure the image fits within its container */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.row-container .image1 img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.row-container .actions {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    list-style: none; /* Remove bullet points */
+}
+
+.row-container .actions .button {
+    background-color: #ff4d4d; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 15px; /* Add padding to the button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add rounded corners */
+    text-decoration: none; /* Remove underline */
+    font-size: 14px; /* Adjust font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.row-container .actions .button:hover {
+    background-color: #e60000; /* Darker background on hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .row-container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .row-container .image1 img {
+        width: 100%; /* Make images responsive */
+        max-width: 200px; /* Limit the maximum width */
+    }
+
+    .row-container .actions .button {
+        width: 100%; /* Make the button full width */
+        text-align: center; /* Center-align the text */
+    }
+}
 		</style>
 		
 	</head>
@@ -442,7 +518,63 @@ ul p {
 
 				<!-- Main -->
 					<div id="main">
-
+						<section id="content" class="main">
+								
+							<section  class="main">
+								<div class="spotlight">
+									<div class="content">
+										<header class="major">
+											<h2>Το Πρόγραμμα του Φεστιβάλ</h2>
+										</header>
+										
+										<div class="row-container">
+											<div class="image-text">
+												<p>To πρόγραμμα του Φεστιβάλ για<br>
+													Αγιο Νικόλαο και Χανια</p>
+												<span class="image1">
+													<a href="crete.pdf" target="_blank">
+														<img src="images/agchprpng.png" alt="Image 1" /></span>
+													</a>
+												
+											</div>
+											<div class="image-text">
+												<p>Το πρόγραμμα του Φεστιβάλ για <br>
+													Λεμεσό</p>
+												<span class="image1">
+													<a href="lem.pdf" target="_blank">
+														<img src="images/lmpr.png" alt="Image 2" /></span>
+													</a>
+												
+											</div>
+										</div>
+									</div>
+									
+								</div>
+								<div class="row-container" style="justify-content: center;">
+								<ul style="justify-content: center;">
+									<h2>Οι Χώροι προβολής ανα πόλη</h2>
+										<li> <a href="https://www.google.com/maps/place/Christina/@35.191777,25.7138358,17z/data=!3m1!4b1!4m6!3m5!1s0x14908170b1628049:0x9c9754c018f51b12!8m2!3d35.191777!4d25.7164161!16s%2Fg%2F11c55rz9k3?entry=ttu&g_ep=EgoyMDI1MDUyNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+											Αγιος Νικόλαος - Κινηματοθέατρο Χριστίνα</a> </li>
+										<li> <a href="https://www.google.com/maps/place/Cultural+Centre+Of+Chania/@35.5118187,24.026476,17z/data=!3m1!4b1!4m6!3m5!1s0x149c7dc0178421db:0x56c2c1e9719614e9!8m2!3d35.5118187!4d24.026476!16s%2Fg%2F11b6ybvsrj?entry=ttu&g_ep=EgoyMDI1MDUyNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+											Χανιά - Πνευματικο Κέντρο </a> </li>
+										<li> <a href="https://www.google.com/maps/dir//Enoseos,+Limassol+3041,+Cyprus/@34.6760852,32.9592059,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x14e73303900fbc81:0xf03a7a36679c5c96!2m2!1d33.0416142!2d34.6760915?entry=ttu&g_ep=EgoyMDI1MDUyNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+											Λεμεσός - neMe Art Center</a>
+											και
+											 <a href="https://www.google.com/maps/dir//M2FV%2B7CW,+Genethliou+Mitellla,+Limassol+3036,+Cyprus/@34.6731977,32.9611824,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x14e73302e71e32e5:0x8b9d9b1e08087b59!2m2!1d33.0435836!2d34.6732254?entry=ttu&g_ep=EgoyMDI1MDUyNi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+												Vinegar Factory (Ξυδάκι)</a>  </li>	
+								</ul>
+							</div>
+								<div class="row-container" style="justify-content: center;">
+								<ul>
+									<h3>
+										<a href="elements.html">
+											Διαβαστε αναλυτικά σxετικά με τις ταινίες που θα προβληθουν στο Φεστιβάλ
+										</a>
+									</h3>
+									
+								</ul>
+								</div>
+							</section>
 
 							<section id="movies" class="main">
 								<div class="spotlight">
@@ -524,7 +656,7 @@ ul p {
 										</ul> -->
 									</div>
 									<a href="https://drive.google.com/file/d/1hd1tW8zLWisCQas2zKyDzcOZ1HDhJx1f/preview" onclick="playMovie(); return false;">
-									<span class="image"><img src="images/jtrailer.png" alt="" /></span>
+									<span class="image1"><img src="images/jtrailer.png" alt="" /></span>
 								</a>
 								</div>
 							</section>
@@ -559,7 +691,7 @@ ul p {
 										</ul> -->
 									</div>
 									<a href="https://drive.google.com/file/d/1hd1tW8zLWisCQas2zKyDzcOZ1HDhJx1f/preview" onclick="playMovie(); return false;">
-									<span class="image"><img src="images/bbt.jpg" alt="" /></span>
+									<span class="image1"><img src="images/bbt.jpg" alt="" /></span>
 								</a>
 								</div>
 							</section>
@@ -601,7 +733,7 @@ Mιας μητρόπολης 5.000 ετών που κάποτε ήταν μια 
 										</ul> -->
 									</div>
 									<a href="https://drive.google.com/file/d/1iy_bVqx2wDZmiYuXfi8EkYrItt3LsBYY/preview" onclick="playMovie(); return false;">
-									<span class="image"><img src="images/lyd .jpg" alt="" /></span>
+									<span class="image1"><img src="images/lyd .jpg" alt="" /></span>
 								</a>
 								</div>
 							</section>
@@ -637,17 +769,14 @@ Mιας μητρόπολης 5.000 ετών που κάποτε ήταν μια 
 										</ul> -->
 									</div>
 									<a href="https://drive.google.com/file/d/1sK9PoyhdwettAvRi_P5T2C6zip7cgPm8/preview" onclick="playMovie(); return false;">
-									<span class="image"><img src="images/stp.jpg" alt="" /></span>
+									<span class="image1"><img src="images/stp.jpg" alt="" /></span>
 								</a>
 								</div>
 							</section>
 
 						<!-- First Section -->
 							<section id="piff" class="main special">
-								<header class="major">
-									<h2>Οι ταινίες που θα προβάλουμε στις 13-14-15 Ιουνίου σε <br>
-										Λεμεσό, Άγιος Νικόλαο και Χανιά</h2>
-									</header>
+								
 										<!-- <div class="content">
 											<ul style="list-style: none; padding: 0; margin: 0; text-align: center;">
 												<li>
@@ -728,32 +857,7 @@ Mιας μητρόπολης 5.000 ετών που κάποτε ήταν μια 
 									</ul> -->
 								</footer>
 							</section>
-							<section id="money" class="main">
-								<div class="spotlight">
-									<div class="content">
-										<header class="major">
-											<h2>Q+Α</h2>
-										</header>
-										<p style="font-size: medium;">
-											Το PIFF είναι εντελώς ανεξάρτητο και μη κερδοσκοπικό, αντι-εμπορικό με κύριο στόχο να διασφαλίσει ότι οι
-											παλαιστινιακές φωνές θα φτάσουν σε όσο το δυνατόν περισσότερα ακροατήρια, χωρίς αποκλεισμούς
-											-ιδιαίτερα για όσους έχουν λιγότερους πόρους.<br>
-											 Πιστεύουμε ότι η τέχνη και ο κινηματογράφος είναι
-											για τις μάζες και πρέπει να είναι προσβάσιμα σε όλους. Ως εκ τούτου, η πρόσβαση στο Φεστιβάλ είναι
-											δωρεάν και ανοιχτή σε όλους με <strong><a  style="color: red; font-size: medium;" href="https://4fund.com/el/n5847t"  target="_blank" >ελεύθερη συνεισφορά</a></strong>  
-											 για να καλυφθούν τα έξοδα της
-											τριήμερης διοργάνωσης .
-</p><ul class="actions">
-	<li><a  href="fund.html"  class="button">Διαβάστε περισσότερα</a></li>
-</ul>
-									</div>
-									<span class="image"><img src="images/34.png" alt="" /></span>
-								</div>
-							</section>
-
-							</section> 
-
-						<!-- Get Started -->
+							
 							<section id="cta" class="main special">
 								<header class="major">
 									<h2>Διοργανωτές</h2>
@@ -772,7 +876,7 @@ Mιας μητρόπολης 5.000 ετών που κάποτε ήταν μια 
 									
 								</p>
 							</div>
-							<span class="image" id="nophoto" ><img src="images/new.jpg"  style=" width: 700px; height: 320px; " /></span>
+							
 								</header>
 								<footer class="major">
 									<ul class="actions special">
